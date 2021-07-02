@@ -7,6 +7,8 @@ chromdriver.exe
 mysql.json
 labeledTrainData.tsv
 model/
+kakaoapikey.txt
+etriaikey.txt
 
 # Byte-compiled / optimized / DLL files
 __pycache__/
