@@ -30,9 +30,12 @@ def detect_object(img_file, return_image=False):
         body=json.dumps(request_json)
     )
     result = json.loads(response.data)
-    if not result['return_object']:
+    """if not result['return_object']:
+        return None"""
+    try:
+        obj_list = result['return_object']['data']
+    except:
         return None
-    obj_list = result['return_object']['data']
 
     image = Image.open(img_file)
     draw = ImageDraw.Draw(image)
